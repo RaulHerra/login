@@ -1,0 +1,38 @@
+*{
+    transition: 1s;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    align-items: center;
+    display: grid;
+    justify-content: center;
+    height: 100%;
+    background-color: #eee;
+    /*
+    background-image: "./src/img/dia.jpg";
+    */
+}
+
+a.enlace{
+    text-decoration: none;
+    color: black;
+}
+a.enlace:hover{
+    text-decoration: underline;
+    color: black;
+}
+
+form{
+    background-color: #808080bb;
+    padding: 25px;
+    border-radius: 20px;
+}

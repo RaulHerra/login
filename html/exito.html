@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/oscuro.css" id="tema">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Sesión iniciada</title>
+</head>
+<body>
+    <div class="contenedor">
+        <form align="center">
+            <p>Grande <b id="nombre"></b>, te has acordado de tu correo <br>y tu contraseña.</p>
+        </form>
+        <a href="../index.html"><button class="btn btn-primary btn-block mb-4">Volver atrás</button></a>
+          <button class="btn btn-primary btn-block mb-4" onclick="cambiarTemaHijo()">change theme</button>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const nombre = urlParams.get('name');
+        document.getElementById("nombre").textContent = nombre;
+
+        function cambiarTemaHijo(){
+        let link = document.getElementById("tema");
+            if(link.getAttribute("href")=="../css/oscuro.css"){
+                link.setAttribute("href","../css/claro.css");
+            }else{
+                link.setAttribute("href","../css/oscuro.css");
+            }  
+        }
+    </script>
+</body>
+</html>
